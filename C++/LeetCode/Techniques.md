@@ -1,3 +1,7 @@
+Same idea exists for **any base**. `%` extracts the last unit of that base, `/=` removes it.
+
+---
+
 ### Binary (base 2)
 
 Used for **bits**.
@@ -97,5 +101,3 @@ These patterns show up everywhere in problems like:
 - bit manipulation
     
 - base conversions.
-
-Same idea exists for **any base**. `%` extracts the last unit of that base, `/=` removes it.
