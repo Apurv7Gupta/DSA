@@ -166,7 +166,7 @@ int Complement(int n) {
     }
 
     // Step 2: create mask with all 1s in length of n
-    int mask = (1 << count) - 1; // e.g., n=5 → 101 → mask=111 (using formula)
+   unsigned int mask = (1U << count) - 1; // using unsigned 1 so that it doesn't overflow the mask
 
     // Step 3: XOR n with mask to flip bits (XOR flips all bits)
     return n ^ mask;
