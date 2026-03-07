@@ -1,3 +1,5 @@
+## Extract last number from a digit
+
 Same idea exists for **any base**. `%` extracts the last unit of that base, `/=` removes it.
 
 ---
@@ -122,5 +124,49 @@ string DecToBin(int n)
         n /= 2;
     }
     return bin;
+}
+```
+
+---
+
+Return 1's complement
+
+Formula =  `mask = (1 << number_of_bits) - 1`
+
+approach:
+
+1) Find how many bits are used in n
+
+    Example: 5 = `101` → 3 bits.
+
+2) Create a mask with all 1s for that length
+
+    For 3 bits → mask = `111` in binary → decimal 7.
+
+3) XOR n with the mask
+
+    complement = n ^ mask
+
+This flips only the bits of n without touching leading zeros.
+
+
+
+```cpp
+int Complement(int n) {
+    if (n == 0) return 1;  // edge case
+
+    // Step 1: find number of bits in n
+    int num_bits = 0;
+    int temp = n;
+    while (temp > 0) {
+        temp >>= 1;       // shift right until all bits processed
+        num_bits++;
+    }
+
+    // Step 2: create mask with all 1s in length of n
+    int mask = (1 << num_bits) - 1;  // e.g., n=5 → 101 → mask=111 (using formula)
+
+    // Step 3: XOR n with mask to flip bits (XOR flips all bits)
+    return n ^ mask;
 }
 ```
