@@ -153,18 +153,20 @@ This flips only the bits of n without touching leading zeros.
 
 ```cpp
 int Complement(int n) {
-    if (n == 0) return 1;  // edge case
+    if (n == 0)
+        return 1; // edge case
 
-    // Step 1: find number of bits in n
-    int num_bits = 0;
+    // Step 1: count number of bits in n
+    int count = 0;
     int temp = n;
-    while (temp > 0) {
-        temp >>= 1;       // shift right until all bits processed
-        num_bits++;
+    while (temp > 0)
+    {
+        temp >>= 1; // shift right until all bits processed
+        count++;
     }
 
     // Step 2: create mask with all 1s in length of n
-    int mask = (1 << num_bits) - 1;  // e.g., n=5 → 101 → mask=111 (using formula)
+    int mask = (1 << count) - 1; // e.g., n=5 → 101 → mask=111 (using formula)
 
     // Step 3: XOR n with mask to flip bits (XOR flips all bits)
     return n ^ mask;
