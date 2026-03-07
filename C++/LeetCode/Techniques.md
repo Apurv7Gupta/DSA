@@ -172,3 +172,23 @@ int Complement(int n) {
     return n ^ mask;
 }
 ```
+
+or
+
+```cpp
+
+class Solution {
+public:
+    int bitwiseComplement(int n) {
+        if (n == 0) return 1;  // edge case
+
+        int mask = 0;
+        for (int temp = n; temp > 0; temp >>= 1) {
+            mask = (mask << 1) | 1;  // build mask of all 1s
+        }
+
+        return ~n & mask;  // flip bits and mask
+    }
+};
+
+```
