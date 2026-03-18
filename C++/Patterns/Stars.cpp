@@ -1,3 +1,13 @@
+/*
+
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * *   
+
+*/
+
 // print 5 stars in a line
 //then endl
 
