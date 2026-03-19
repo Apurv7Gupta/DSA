@@ -39,6 +39,14 @@ string DecToBin(int n)
 }
 ```
 
+### Super Short
+
+```cpp
+string DecToBin(int n) {
+    return bitset<32>(n).to_string();              // Fixed 32-bit width, pads with leading zeros
+}
+```
+
 ---
 
 ## Line-by-line breakdown (Common)
