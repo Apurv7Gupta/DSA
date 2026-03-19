@@ -1,4 +1,4 @@
-## Any base to decimal (Reverse Horner's)
+## Decimal to any base (Reverse Horner's)
 
 ```cpp
 string toBase(int n, int base) {
