@@ -26,4 +26,5 @@ int BinToDec(const string &s) {
 Why using const: 
 
 When you pass by reference (&) (to avoid unnecessarily copying the argument), the function has direct access to the original string — it could modify it.
+
 But if you tried to modify the argument inside the function with const, the compiler would throw an error. So it's essentially a compile-time safety guarantee.
