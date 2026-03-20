@@ -1,4 +1,4 @@
-## Extract last number from a digit
+## Extract last digit
 
 Same idea exists for **any base**. `%` extracts the last unit of that base, `/=` removes it.
 
