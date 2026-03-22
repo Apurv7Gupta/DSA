@@ -1,5 +1,15 @@
 ## Kernighan Algo
 
+
+```cpp
+int count = 0;
+while (n > 0)
+{
+    n = n & (n - 1);
+    count++;
+}
+```
+
 Subtracting `1` from a number flips bits starting from the **rightmost `1`**.
 
 Example:
