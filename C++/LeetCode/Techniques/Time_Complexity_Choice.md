@@ -25,6 +25,8 @@ You have a "Time Budget" of roughly $10^8$ operations.
 
 $n$ is the size of your input, and the Big O complexity is the "cost" per item.
 
-The "Complexity Budget" RuleIf $n$ is tiny (e.g., 10): You have a massive budget! You can afford a very "expensive" algorithm like $O(n!)$ or $O(2^n)$ and still finish under the 1-second limit.
+### The "Complexity Budget" Rule
+
+If $n$ is tiny (e.g., 10): You have a massive budget! You can afford a very "expensive" algorithm like $O(n!)$ or $O(2^n)$ and still finish under the 1-second limit.
 
 If $n$ is huge (e.g., $10^7$): You are broke! You can only afford a very "cheap" algorithm like $O(n)$ or $O(\log n)$. Anything more expensive (like $O(n^2)$) will "bankrupt" your time limit.
