@@ -1,5 +1,10 @@
 ### Complexity Reference Table
 
+`n` is the input,
+
+when you see the constraints of the question and n is:
+
+
 | If $n$ is... | Recommended Big O Complexity |
 | :--- | :--- |
 | **$\leq [10 \dots 11]$** | $O(n!)$ or $O(n^6)$ |
