@@ -1,3 +1,30 @@
+### Common DSA method
+
+```cpp
+int binarySearch(const vector<int>& nums, int key) {
+    int left = 0;
+    int right = nums.size() - 1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2; // avoids overflow
+
+        if (nums[mid] == key) {
+            return mid;
+        }
+        else if (nums[mid] < key) {
+            left = mid + 1;   // go right
+        }
+        else {
+            right = mid - 1;  // go left
+        }
+    }
+
+    return -1; // not found
+}
+```
+
+### Brute-force method
+
 ```cpp
 int binarySearch(int key, vector<int> &nums)
 {
@@ -27,15 +54,6 @@ int binarySearch(int key, vector<int> &nums)
     return -1;
 }
 
-void printArray(vector<int> &arr)
-{
-
-    for (int i = 0; i < arr.size(); i++)
-    {
-
-        cout << arr[i] << " ";
-    }
-}
 
 int main()
 
@@ -47,7 +65,6 @@ int main()
 
     cout << done;
 
-    // printArray(done);
     return 0;
 }
 ```
