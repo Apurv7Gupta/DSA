@@ -19,3 +19,24 @@ vector<int> applyOperations(vector<int> &nums)
     return nums;
 }
 ```
+
+
+Generic code:
+
+
+```cpp
+// Two Pointer - Write Pointer Pattern
+// Use when: filtering / rearranging an array in-place
+
+int idx = 0; // write pointer
+
+for (int i = 0; i < n; i++) {
+    if (/* keep condition */) {
+        nums[idx++] = nums[i];
+    }
+}
+// optional: fill remainder
+while (idx < n) nums[idx++] = fillValue;
+```
+
+Swap out `keep condition` and `fillValue` for whatever the problem needs.
