@@ -22,3 +22,7 @@ int binarySearch(const vector<int>& nums, int key) {
     return -1; // not found
 }
 ```
+### Notes
+
+- Only works on sorted arrays
+- Only works on monotonic stacks
