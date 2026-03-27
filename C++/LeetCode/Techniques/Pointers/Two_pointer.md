@@ -20,9 +20,7 @@ vector<int> applyOperations(vector<int> &nums)
 }
 ```
 
-
 Generic code:
-
 
 ```cpp
 // Two Pointer - Write Pointer Pattern
