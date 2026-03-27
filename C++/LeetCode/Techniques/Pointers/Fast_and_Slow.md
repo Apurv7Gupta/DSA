@@ -9,9 +9,9 @@ vector<int> applyOperations(vector<int> &nums)
         {
             nums[idx++] = nums[j];
         }
-    } // <-- for loop ends here
+    }
 
-    while (idx < nums.size()) // <-- now runs AFTER full scan
+    while (idx < nums.size())
     {
         nums[idx++] = 0;
     }

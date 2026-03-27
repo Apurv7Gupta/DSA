@@ -1,3 +1,4 @@
+```cpp
 void sortZerosOnes(vector<int> &arr)
 {
     int left = 0, right = arr.size() - 1;
@@ -11,3 +12,6 @@ void sortZerosOnes(vector<int> &arr)
             swap(arr[left++], arr[right--]);
     }
 }
+```
+
+Pointers start from `Opposite Ends` and converge
