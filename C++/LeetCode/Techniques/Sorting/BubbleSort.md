@@ -23,3 +23,7 @@ void bubbleSort(vector<int> &arr)
 }
 
 ```
+
+Time: O($n^{2}$)
+
+Space: O($1$)
