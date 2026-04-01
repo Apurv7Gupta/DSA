@@ -57,6 +57,7 @@ void bubbleSort(vector<int> &arr)
 ```
 
 Time: 
+    
     - **Best Case(already sorted)**: O($n^{2}$)
     
     - **Worst Case(reverse sorted)**: O($n$)
