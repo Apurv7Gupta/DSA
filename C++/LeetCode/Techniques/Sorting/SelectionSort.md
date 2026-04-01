@@ -25,9 +25,26 @@ Good for `small` data, bad for big data
 
 # Code
 ```cpp
-vector<int> selectionSort(vector<int> &arr)
+void selectionSort(vector<int> &arr)
 {
 
-    return arr;
+ for (int i = 0; i < arr.size() - 1; ++i)           // going till second last element because last element doesnt need checking
+    {
+
+        int minIndex = i;                           // assume current index holds the minimum
+
+        for (int j = i + 1; j < arr.size(); ++j)        // scan the remaining unsorted part (i+1 to end)
+        {
+            if (arr[minIndex] > arr[j])                // if a smaller element is found, update minIndex
+            {
+                minIndex = j;
+            }
+        }
+        if (minIndex != i)                           // swap only if a smaller element was found
+        {
+            std::swap(arr[i], arr[minIndex]);
+        }
+    }
+
 }
 ```
