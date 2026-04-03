@@ -48,3 +48,7 @@ void selectionSort(vector<int> &arr)
 
 }
 ```
+
+# Visualization
+
+https://www.youtube.com/shorts/Eyfbg0uEHXU
