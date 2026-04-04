@@ -2,7 +2,7 @@ Set the first element as the `current_mimnimum`
 
 Find the element smaller than the `current_minimum` by comparing it with every element
 
-If found, swap that element with the `current_minimum` => now that element is the new `current_minimum`
+After the full scan, if found, swap that element with the `current_minimum` => now that element is the new `current_minimum`
 
 Move to the next index (i = i+1)
 
