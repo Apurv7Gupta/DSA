@@ -1,17 +1,12 @@
-# Algorithm
-1) Start with the first index (i = 0).
+Set the first element as the `current_mimnimum`
 
-2) Assume the current position holds the minimum value.
+Find the element smaller than the `current_minimum` by comparing it with every element
 
-3) Compare this value with the rest of the array (from i+1 to end).
+If found, swap that element with the `current_minimum` => now that element is the new `current_minimum`
 
-4) Find the actual minimum element in the remaining unsorted part.
+Move to the next index (i = i+1)
 
-5) Swap the found minimum element with the element at index i.
-
-6) Move to the next index (i = i + 1).
-
-7) Repeat steps 2–6 until the entire array is sorted.
+Repeat
 
 # Complexities
 - **Time Complexity**: O(n²) always
