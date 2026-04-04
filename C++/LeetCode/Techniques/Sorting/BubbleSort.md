@@ -1,8 +1,21 @@
 # Algorithm
+
+> **You just compare every element with its neighbour and swap them if they're unsorted**
+
+1. start with the `first & second` elements
+
+2. compare them, if they're out of place, swap them
+
+3. compare the `second & third` elements
+
+4. compare them, if they're out of place, swap them
+
+5. repeat
+
 In every $i^{th}$ round, you place the $i^{th}$ largest element in its correct place
 
-
 # Code
+
 ```cpp
 
 void bubbleSort(vector<int> &arr)
@@ -27,8 +40,6 @@ void bubbleSort(vector<int> &arr)
 Time: O($n^{2}$)
 
 Space: O($1$)
-
-
 
 # Optimized
 
@@ -56,10 +67,8 @@ void bubbleSort(vector<int> &arr)
 
 ```
 
-Time: 
-    
+Time:
+
     - **Best Case(already sorted)**: O($n^{2}$)
-    
+
     - **Worst Case(reverse sorted)**: O($n$)
-
-
