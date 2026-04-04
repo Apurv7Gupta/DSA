@@ -1,12 +1,14 @@
-Set the first element as the `current_mimnimum`
+1) Set the first element as the `current_mimnimum`
 
-Find the element smaller than the `current_minimum` by comparing it with every element
+2) Find the element smaller than the `current_minimum` by comparing it with every element
 
-After the full scan, if found, swap that element with the `current_minimum` => now that element is the new `current_minimum`
+3) After the full scan, if found, swap that element with the `current_minimum` => now that element is the new `current_minimum`
 
-Move to the next index (i = i+1)
+4) Move to the next index (i = i+1)
 
-Repeat
+5) Repeat
+
+### Defining Characteristic:  Selection sort does at most `one swap per pass`
 
 # Complexities
 - **Time Complexity**: O(n²) always
