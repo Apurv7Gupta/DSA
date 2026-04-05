@@ -18,9 +18,5 @@ int addDigits(int num)
     return num;
 }
 
-int main()
-{
-
-    cout << addDigits(38);
-}
+//    addDigits(38) => 2;
 ```
