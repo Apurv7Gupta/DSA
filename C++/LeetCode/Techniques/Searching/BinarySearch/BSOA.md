@@ -1,5 +1,100 @@
 # Binary Search On Answer
 
+## How to spot a BSOA problem
+
+When you see:
+
+“minimum possible maximum”
+
+“maximize minimum”
+
+“split into k groups”
+
+“capacity / speed / time”
+
+Your brain should instantly go:
+
+“This is probably a boundary problem.”
+
+You need a function like:
+
+```f(x) = true/false```
+
+that behaves like:
+
+```FFFFFTTTTT   or   TTTTTFFFFF```
+
+If you don’t see that, stop. It’s not BSOA.
+
+## Approach
+
+You're not “searching an answer.”
+
+You’re finding the boundary where something flips.
+
+1) Identify the decision question
+
+Turn the problem into:
+
+“If I pick value x, can I do it?”
+
+Examples:
+
+`Koko → “Can she finish in x hours?”`
+
+`Ship → “Can I ship with capacity x?”`
+
+2) Lock search space (this is where people mess up)
+
+Don’t guess randomly. Use logic:
+
+`Minimum possible answer`
+
+`Maximum possible answer`
+
+Examples:
+
+Koko → [1, max(pile)]
+Ship → [max(weight), sum(weight)]
+
+If your bounds are wrong, everything breaks.
+
+3) Build the check function (core skill)
+
+This is the only hard part.
+
+You're simulating constraints:
+
+`bool can(x)`
+
+Typical patterns:
+
+Greedy accumulation
+
+Counting splits/groups
+
+Time simulation
+
+4) Binary search the boundary
+
+Template:
+
+```cpp
+while (l <= r) {
+    mid = (l + r) / 2;
+    if (can(mid)) {
+        ans = mid;
+        r = mid - 1; // try smaller
+    } else {
+        l = mid + 1;
+    }
+}
+```
+
+This finds minimum valid x.
+
+
+
 ```cpp
 
 // k = bananasEaten/hour
