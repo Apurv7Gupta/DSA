@@ -23,7 +23,7 @@ void insertionSort(vector<int>& arr) {
 
     for (int i = 1; i < n; i++) {          // start from second element
         int key = arr[i];                  // current element
-        int j = i - 1;
+        int j = i - 1;                    // element left of key
 
         // shift elements greater than key to one position ahead
         while (j >= 0 && arr[j] > key) {
