@@ -1,0 +1,9 @@
+Two Pointers
+
+Opposite ends --DONE
+Fast/slow
+Sliding window (fixed + variable)
+Partitioning
+Merge-type
+Expand-around-center
+Multi-pointer (k-sum)
