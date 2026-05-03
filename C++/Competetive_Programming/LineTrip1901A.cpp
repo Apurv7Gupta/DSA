@@ -1,4 +1,3 @@
-
     while (t--)
     {
 
@@ -10,38 +9,22 @@
         for (int i = 0; i < n; i++)
             cin >> arr[i];
 
-        
-        // --------------------------include start and end positions-----------------
-        vector<int> brr;
+        int ans = max(arr[0], 2 * (x - arr.back()));
+        // max among (distance b/w start and first gas station) & (distance b/w last gas station and destination), 2 times (roundtrip)
 
-        brr.push_back(0);
-
-        for (int GasStations : arr)
-            brr.push_back(GasStations);
-
-        brr.push_back(x);
-        // ---------------------------------------------------------------------------
-
-        int biggest = 0;
-
-        
         /*
-        
-        0 → 10 = 10
-        10 → 20 = 10
-        20 → 90 = 70
-        90 → 100 = 10
-        
-        => max gap = 70 => min capacity of tank
+
+        Example: x = 100, stations = {10, 20, 90}
+        - 0 to 10 = 10
+        - 10 to 20: = 10
+        - 20 to 90 = 70
+        - 90 to 100 and back to 90 = 20 (10 out, 10 back)
+        Final Ans: max(10, 20, 10, 70) = 70
 
         */
-        
-        for (int i = 0; i + 1 <= (int)brr.size() - 1; i++)
-        {
-            int diff = brr[i + 1] - brr[i];
-            if (diff > biggest)
-                biggest = diff;
-        }
 
-        cout << biggest << "\n";
+        for (int i = 1; i < n; i++)
+            ans = max(ans, arr[i] - arr[i - 1]);
+
+        cout << ans << "\n";
     }
