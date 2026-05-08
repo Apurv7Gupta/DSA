@@ -1,10 +1,12 @@
-90° = transpose + reverse row
+`90° = transpose + reverse row`
 
-180° = reverse row + reverse column
+`180° = reverse row + reverse column`
 
-270° = transpose + reverse col
+`270° = transpose + reverse col`
 
-> 90° Example:
+### 90° Example:
+
+![Visualization](90°rot_Visualization.png)
 
 ```cpp
 
