@@ -1,3 +1,9 @@
+Learn Custom Implementation for DSA & do leetcode questions
+
+STL implementations are just for knowledge and never really used anywhere
+
+In real world code LinkedList are mostly replaced by Vectors
+
 Visualization: https://www.youtube.com/watch?v=N6dOwBde7-M&t=106s&pp=ygUPbGlua2VkIGxpc3QgY3Bw
 
-Depth explanation: https://www.youtube.com/watch?v=Nq7ok-OyEpg
+In-Depth explanation: https://www.youtube.com/watch?v=Nq7ok-OyEpg
