@@ -18,8 +18,6 @@ vector<int> FindUnique(vector<int> &arr)
 
 Store duplicate elements from a vector while keeping the original order of appearance.
 
----
-
 #### 1. Create a set to track visited elements
 
 ```cpp
@@ -28,14 +26,6 @@ unordered_set<int> seen;
 
 `unordered_set` stores only unique values.
 
-Example:
-
-```txt
-seen = {1, 2, 3}
-```
-
-If you try inserting `2` again, it won’t be added.
-
 ---
 
 #### 2. Create result vector
@@ -43,8 +33,6 @@ If you try inserting `2` again, it won’t be added.
 ```cpp
 vector<int> ans;
 ```
-
-This stores the final unique elements.
 
 ---
 
@@ -63,8 +51,6 @@ Iterates through every element in the vector.
 ```cpp
 if (seen.insert(i).second)
 ```
-
-This is the important line.
 
 `seen.insert(i)` returns:
 

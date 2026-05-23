@@ -1,12 +1,14 @@
- ![[Excalidraw/STL.md#^group=c6nvdRGuN3scuOuyw8d8S]] 
+ ![[Excalidraw/STL.md#^group=c6nvdRGuN3scuOuyw8d8S]]
+
  
  - linear data structure
+
  
  - follows a particular order of performing operations (LIFO or FILO)
 
-- stack container follows ==LIFO==  order of insertion and deletion in C++.
+- stack container follows ==LIFO== order of insertion and deletion in C++.
 
-- This is done by ==inserting and deleting elements at only one end== of the stack (generally called the top of the stack) 
+- This is done by ==inserting and deleting elements at only one end== of the stack (generally called the top of the stack)
 
 - ==We can't access any middle element of stack, only the top==
 
@@ -14,16 +16,12 @@
 
 ### Under the hood:
 
-
 `template<     class T,     class Container = std::deque<T> > class stack;`
 
 - Default container is `std::deque`, but you can change it to `std::vector` or `std::list` if needed.
-    
 - It uses the container’s `back()` for `top()`, `push_back()` for `push()`, and `pop_back()` for `pop()`.
 
-
-LIFO ![LIFO](https://media.geeksforgeeks.org/wp-content/uploads/20240606180844/Push-Operation-in-Stack-(1).webp)
-
+LIFO ![LIFO](<https://media.geeksforgeeks.org/wp-content/uploads/20240606180844/Push-Operation-in-Stack-(1).webp>)
 
 | Time Complexity      | O(1)     |
 | -------------------- | -------- |
@@ -31,9 +29,7 @@ LIFO ![LIFO](https://media.geeksforgeeks.org/wp-content/uploads/20240606180844/P
 
 Psuedo Traversal
 
-
 > **Note:** Though stacks can be possibly implemented using vectors, its middle elements cannot be accessed due to LIFO restrictions.
-
 
 #### Functions
 
@@ -49,8 +45,7 @@ Add range of elements at top of the stack.
 
 Access the top element of the stack.
 
-Top/Peek Operation![[Top/Peek Operation](https://media.geeksforgeeks.org/wp-content/uploads/20240606181023/Top-or-Peek-Operation-in-Stack-(1).webp)
-
+Top/Peek Operation![[Top/Peek Operation](<https://media.geeksforgeeks.org/wp-content/uploads/20240606181023/Top-or-Peek-Operation-in-Stack-(1).webp>)
 
 `pop()` ^pop
 
@@ -71,4 +66,3 @@ Checks if the stack is empty.
 `swap()` ^swap
 
 Swap two stacks.
- 

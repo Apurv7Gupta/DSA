@@ -1,0 +1,47 @@
+Define the LinkedList procedurally:
+
+```cpp
+struct Node {
+    int data;
+    Node* next;
+};
+
+Node* head = nullptr;
+```
+
+Then separate functions:
+
+```cpp
+void insertNode(Node*& head, int value);
+void removeNode(Node*& head, int value);
+void display(Node* head);
+```
+
+In normal DSA practice, you manually create and manipulate the linked list using pointers and helper functions.
+
+### In Leetcode:
+
+Leetcode already defines this internally:
+
+```cpp
+struct ListNode {
+      int val;
+      ListNode *next;
+      ListNode() : val(0), next(nullptr) {}
+      ListNode(int x) : val(x), next(nullptr) {}
+      ListNode(int x, ListNode *next) : val(x), next(next) {}
+  };
+```
+
+and you work in here:
+
+```cpp
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+
+    }
+};
+```
+
+In LeetCode, the linked list structure and test cases are already created internally, and you only implement the algorithm logic inside the provided function.
