@@ -22,7 +22,7 @@ int *ptr = &x;
 
 `ptr = address of x`
 
-`ptr* = 10`
+`*ptr = 10`
 
 **& is also used for references:**
 
@@ -127,3 +127,5 @@ Here ref becomes another name for x (an alias), not an address.
   *ptr   = p (address of a)
   **ptr  = *p (5)
   ```
+
+> for practice: https://www.naukri.com/code360/guided-paths/pointers
