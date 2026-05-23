@@ -128,4 +128,62 @@ Here ref becomes another name for x (an alias), not an address.
   **ptr  = *p (5)
   ```
 
+# Types of pointers:
+
+## Dangling Pointer
+
+A pointer that points to memory that is already freed or invalid.
+
+Example:
+
+```cpp
+int* p = new int(5);
+
+delete p; // memory freed
+
+cout << *p; // dangling pointer usage -> undefined behavior
+```
+
+`p` still stores the old address, but that memory is gone.
+
+Also happens with local variables:
+
+```cpp
+int* func() {
+    int x = 10;
+    return &x; // BAD
+}
+```
+
+`x` dies after function ends, so returned pointer dangles.
+
+Fix:
+
+```cpp
+delete p;
+p = nullptr;
+```
+
+---
+
+## Wild Pointer
+
+A pointer that was never initialized.
+
+Example:
+
+```cpp
+int* p; // wild pointer
+
+cout << *p; // garbage address -> undefined behavior
+```
+
+`p` contains random garbage memory address.
+
+Fix:
+
+```cpp
+int* p = nullptr;
+```
+
 > for practice: https://www.naukri.com/code360/guided-paths/pointers
