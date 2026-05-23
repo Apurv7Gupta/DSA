@@ -19,7 +19,7 @@ void display(Node* head);
 
 In normal DSA practice, you manually create and manipulate the linked list using pointers and helper functions.
 
-### In Leetcode:
+# In Leetcode:
 
 Leetcode already defines this internally:
 
@@ -40,6 +40,29 @@ class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
 
+        // Previous node
+        ListNode* prev = nullptr;
+
+        // Current node
+        ListNode* curr = head;
+
+        while (curr != nullptr) {
+
+            // Store next node
+            ListNode* nextNode = curr->next;
+
+            // Reverse pointer
+            curr->next = prev;
+
+            // Move prev forward
+            prev = curr;
+
+            // Move curr forward
+            curr = nextNode;
+        }
+
+        // New head
+        return prev;
     }
 };
 ```
