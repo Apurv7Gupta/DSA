@@ -28,32 +28,20 @@ int reverse(int number)
 
 // cout<<reverse(394) => 493
 ```
-# For DSA: add result overflow check
 
+# Variation: extract digits
 
 ```cpp
-int reverse(int number)
-{
 
-    int result = 0;
+void ExtractDigits(int n){
 
-    while (number)
-    {
-        // extract last digit
-        int digit = number % 10;
-        // Check if result will overflow on next loop
-        if (result > INT_MAX || result < INT_MIN)
-        {
-            return 0;
-        }
-        // shift place value
-        result = result * 10 + digit;
-        // remove last digit from number
-        number /= 10;
+    string extracted_digits;
+    int temp = n;
 
-        // repeat till number is zero
-    }
-    return result;
+        while (temp) {
+            int digit = temp % 10;              // extract digits from the number
+            temp /= 10;                         // tell the number digits have been extracted from it
+            extracted_digits += to_string(digit);
+            }
 }
-// cout<<reverse(394) => 493
 ```

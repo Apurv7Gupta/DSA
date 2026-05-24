@@ -9,12 +9,9 @@ bool containsDuplicate(vector<int>& nums) {
 
     for (int i : nums) {
 
-        if (seen.count(i))
-        {
+        if (seen.count(i)){
             duplicate = true;
-        }
-        else
-        {
+        }else{
             seen.insert(i);
         }
     }
