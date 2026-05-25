@@ -28,13 +28,13 @@ There can be two types of heaps:
 Priority queue is a container adaptor generally built over vector container. We can implement both of these heaps in priority queue. 
 
 ```cpp
-
 #include <iostream>
 #include <queue>
 #include <vector>
 
 int main() {
     // 1. MAX-HEAP (Default) [descending order]
+    
     std::priority_queue<int> Name;
 
     // Push elements
@@ -47,14 +47,17 @@ int main() {
     // => Outputs 30
 
     // Popping elements (removes the largest)
+    
     maxHeap.pop(); 
     std::cout << "Max-Heap top after pop: " << maxHeap.top() << std::endl;
     // => Outputs 20
+```
 
 
-
+```cpp
     // 2. MIN-HEAP [ascending order]
     // Syntax: std::priority_queue<Type, Container, Comparator>
+    
     std::priority_queue<int, std::vector<int>, std::greater<int>> minHeap;
 
     // Push elements
@@ -67,13 +70,17 @@ int main() {
 	// => Outputs 5
 
     // Popping elements (removes the smallest)
+    
     minHeap.pop();
     std::cout << "Min-Heap top after pop: " << minHeap.top() << std::endl;
 	// => Outputs 10
+```
 
-    // ----------------------------------------------------------------
-    // 3. ESSENTIAL CHECKS (Common to both)
-    // ----------------------------------------------------------------
+```cpp
+	 // ----------------------------------------------------------------
+     // 3. ESSENTIAL CHECKS (Common to both)
+     // ----------------------------------------------------------------
+    
     if (!minHeap.empty()) {
         std::cout << "Min-Heap size: " << minHeap.size() << std::endl;
     }
