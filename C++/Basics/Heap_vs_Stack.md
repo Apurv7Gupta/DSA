@@ -46,3 +46,27 @@ after using dynamic allocation, deleting the memory manually is crucial, using `
 delete []arrayName      // if you created array
 delete variableName      // if you created int/char/bool/string/etc.
 ```
+
+---
+
+EXAMPLES (incomplete)
+
+```cpp
+// Creating dynamic 2D array
+int n;
+cout<<"Enter the dimension of sq. matrix";
+cin >> n;
+
+int** arr = new int*[n];
+
+for(int i = 0; i<n; ++i){
+    arr[i] = new int[n];
+}
+
+// creation done
+
+// taking input
+for(int i = 0)
+
+
+```
