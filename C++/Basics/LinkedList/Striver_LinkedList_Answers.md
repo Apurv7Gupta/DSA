@@ -82,5 +82,46 @@ head->next->next->next = new Node(4);
         temp = temp->next;
     }
 
+     // =================Find length of LL===============
+    Node *temp = head;
+
+    int count = 0;
+    while (temp != nullptr)
+    {
+        count++;
+        temp = temp->next;
+    }
+
+    cout << "the length of the LinkedList = "<< count;
+
+    // =================Search in LL===============
+    // given: 0->1->2, k = 2
+
+    Node *temp = head;
+
+    while (temp != nullptr)
+    {
+        if(temp->data == k){
+            cout<< "Found";
+            break;
+        }
+
+        temp = temp->next;
+    }
+    // t: O(n), s: O(1)
+
+   // =================Detect cycle in LL===============
+    Node* slow = head;
+    Node* fast = head;
+
+    while (fast != nullptr && fast->next != nullptr)
+    {
+        slow = slow->next;          // 1 step
+        fast = fast->next->next;    // 2 steps
+
+        if (slow == fast)           // same node address => pointers have met
+            return true;            // cycle exists
+    }
+
 }
 ```
