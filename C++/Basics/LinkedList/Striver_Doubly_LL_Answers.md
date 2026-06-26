@@ -23,11 +23,43 @@ struct Node
 };
 ```
 
-### Insert node before head
+### Insert at end
 
 t: , s:
 
 ```cpp
+// take the prevNode (final node) & conn it w/ your value
+
+Node* insertAtTail(int value, Node* head, Node* curr_tail){
+
+    Node* newTail = new Node(value);
+
+    if (curr_tail)                  // if current tail is provided => O(1)
+    {
+        curr_tail->next = newTail;
+        newTail->prev = curr_tail;
+        return head;
+    }
+
+    else
+    {
+
+        if(head == nullptr)             // if list is empty
+            return newTail;
+
+        Node* temp = head;
+
+        while(temp->next != nullptr)        // find the tail => O(n)
+            temp = temp->next;
+
+        temp->next = newTail;
+        newTail->prev = temp;
+    }
+
+    return head;
+}
+
+
 
 ```
 
