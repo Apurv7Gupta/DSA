@@ -30,7 +30,7 @@ t: , s:
 ```cpp
 // take the prevNode (final node) & conn it w/ your value
 
-Node* insertAtTail(int value, Node* head, Node* curr_tail){
+Node* insertAtTail(int value, Node* head, Node* curr_tail = nullptr){
 
     Node* newTail = new Node(value);
 
@@ -38,7 +38,7 @@ Node* insertAtTail(int value, Node* head, Node* curr_tail){
     {
         curr_tail->next = newTail;
         newTail->prev = curr_tail;
-        return head;
+        return newTail;
     }
 
     else
@@ -56,9 +56,10 @@ Node* insertAtTail(int value, Node* head, Node* curr_tail){
         newTail->prev = temp;
     }
 
-    return head;
+    return newTail;
 }
 
+// usage: tail = insertAtTail(9, head); or tail = insertAtTail(9, head, tail);
 
 
 ```
