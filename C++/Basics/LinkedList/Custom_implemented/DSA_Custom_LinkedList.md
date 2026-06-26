@@ -4,9 +4,48 @@ Define the LinkedList procedurally:
 struct Node {
     int data;
     Node* next;
+
+    Node(int value) // constructor w/o nextptr
+    {
+        data = value;
+        next = nullptr;
+    }
+
+    Node(int value, Node* nextNode) // constructor w/ nextptr
+    {
+        data = value;
+        next = nextNode;
+    }
+
 };
 
 Node* head = nullptr;
+
+
+// Usage: Node* head = new Node(10);
+```
+
+Or if you need an LL of ANY data type (not only int)
+
+```cpp
+template <typename T>
+
+struct Node {
+    T data;
+    Node* next;
+
+    // (define constructors after this)
+};
+
+/*
+Usage:
+
+Node<int>* head = new Node<int>(10);
+Node<std::string>
+Node<double>
+Node<MyClass>
+
+*/
 ```
 
 Then separate functions:

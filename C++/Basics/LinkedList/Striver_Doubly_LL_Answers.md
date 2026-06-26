@@ -25,11 +25,7 @@ struct Node
 
 ### Insert at end
 
-t: , s:
-
 ```cpp
-// take the prevNode (final node) & conn it w/ your value
-
 Node* insertAtTail(int value, Node* head, Node* curr_tail = nullptr){
 
     Node* newTail = new Node(value);
