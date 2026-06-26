@@ -26,36 +26,37 @@ struct Node
 ### Insert at end
 
 ```cpp
-Node* insertAtTail(int value, Node* head, Node* curr_tail = nullptr){
+Node* insertAtTail(int value, Node*& head, Node* curr_tail = nullptr){        // *& because we're passing head by ref
 
     Node* newTail = new Node(value);
 
-    if (curr_tail)                  // if current tail is provided => O(1)
+    // ==============if current tail is provided => O(1)==============
+    if (curr_tail)
     {
         curr_tail->next = newTail;
         newTail->prev = curr_tail;
         return newTail;
     }
 
-    else
-    {
-
-        if(head == nullptr)             // if list is empty
-            return newTail;
-
-        Node* temp = head;
-
-        while(temp->next != nullptr)        // find the tail => O(n)
-            temp = temp->next;
-
-        temp->next = newTail;
-        newTail->prev = temp;
+    if(head == nullptr){             // if list is empty
+        head = newTail;
+        return newTail;
     }
+
+   // ==============if tail is not provided => O(n)==============
+    Node* temp = head;
+
+    while(temp->next != nullptr)
+        temp = temp->next;
+
+    temp->next = newTail;
+    newTail->prev = temp;
+
 
     return newTail;
 }
 
-// usage: tail = insertAtTail(9, head); or tail = insertAtTail(9, head, tail);
+// Usage: tail = insertAtTail(9, head); or tail = insertAtTail(9, head, tail);
 
 
 ```
@@ -63,7 +64,7 @@ Node* insertAtTail(int value, Node* head, Node* curr_tail = nullptr){
 ### Delete Tail
 
 ```cpp
-Node* deleteTail(Node*& head, Node* tail = nullptr){        // *& because we're passing head by ref
+Node* deleteTail(Node*& head, Node* tail = nullptr){
 
     if(head == nullptr)                 // if LL empty
         return nullptr;
