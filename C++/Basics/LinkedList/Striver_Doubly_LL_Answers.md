@@ -60,11 +60,43 @@ Node* insertAtTail(int value, Node* head, Node* curr_tail = nullptr){
 
 ```
 
-### Delete Head
-
-t: , s:
+### Delete Tail
 
 ```cpp
+Node* deleteTail(Node*& head, Node* tail = nullptr){        // *& because we're passing head by ref
+
+    if(head == nullptr)                 // if LL empty
+        return nullptr;
+
+    if(head->next == nullptr){          // if only one element
+        delete head;
+        head = nullptr;
+        return nullptr;
+    }
+
+
+    // ==============if tail is provided => O(1)==============
+    if (tail)
+    {
+        Node* newTail = tail->prev;     // create new tail
+        newTail->next = nullptr;        // unlink old tail
+        delete tail;                    // delete old tail
+        return newTail;
+    }
+
+    // ==============if tail is not provided => O(n)==============
+    Node* temp = head;
+
+    while(temp->next != nullptr)
+        temp = temp->next;
+
+    Node* newTail = temp->prev;     // create new tail
+    newTail->next = nullptr;        // unlink old tail
+    delete temp;                    // delete old tail
+    return newTail;
+}
+
+// Usage: tail = deleteTail(head) or tail = deleteTail(head, tail)
 
 ```
 
