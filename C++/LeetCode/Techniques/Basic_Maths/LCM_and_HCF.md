@@ -17,9 +17,9 @@ LCM = 2² × 3² = 36
 
 ### Cake Method
 
-Write both numbers side by side.
-Repeatedly divide by common prime factors
-(left divisors) × (bottom numbers)
+1. Write both numbers side by side.
+2. Repeatedly divide by common prime factors
+3. (left divisors) × (bottom numbers)
 
 ```
 2 | 12   18
