@@ -123,5 +123,30 @@ head->next->next->next = new Node(4);
             return true;            // cycle exists
     }
 
+       // =================Detect cycleLength in LL===============
+
+        Node* slow = head;
+        Node* fast = head;
+
+        while (fast != nullptr && fast->next != nullptr)
+        {
+            slow = slow->next;       // 1 step
+            fast = fast->next->next; // 2 steps
+
+            if (slow == fast) // same node address => pointers have met => cycle exists
+            {
+                ListNode *temp = slow;
+                int count = 0;
+
+                do
+                {
+                    count++;
+                    temp = temp->next;
+                } while (temp != slow);
+
+                return count;
+            }
+        }
+
 }
 ```
