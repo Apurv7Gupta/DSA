@@ -100,3 +100,8 @@ int main()
 
     return 0;
 }
+
+/* Optimal
+O(n) time,
+O(1) space
+*/
