@@ -1,4 +1,4 @@
-Define the LinkedList procedurally:
+SLL Strcut:
 
 ```cpp
 struct Node {
@@ -59,6 +59,31 @@ head->next->next->next = new Node(4);
 // ===Or using obj:
 Node dummy(0);
 dummy.next = 1;
+```
+
+DLL Struct:
+
+```cpp
+struct Node
+{
+    int data;
+    Node *next;
+    Node* prev;
+
+    // Cons w/o nextptr
+    Node(int value){
+        data = value;
+        next = nullptr;
+        prev = nullptr;
+    }
+
+    // Cons w/ nextptr & prevptr
+    Node(int value, Node* nextNode, Node* prevNode){
+        data = value;
+        next = nextNode;
+        prev = prevNode;
+    }
+};
 ```
 
 Create Doubly LL:
