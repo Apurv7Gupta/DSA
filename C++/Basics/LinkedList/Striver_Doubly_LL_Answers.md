@@ -103,10 +103,29 @@ Node* deleteTail(Node*& head, Node* tail = nullptr){
 
 ### Reverse a Doubly Linked List
 
-t: , s:
+t: O(n) , s: O(1)
 
 ```cpp
+Node *reverseDLL(Node *head)
+{
+    Node *curr = head;
+    Node *temp = nullptr;
 
+    while (curr != nullptr)
+    {
+        temp = curr->prev;               // save prev
+        curr->prev = curr->next;        // new prev = old next
+        curr->next = temp;             // new next = old prev (swap complete)
+
+        curr = curr->prev;            // move to the next node
+    }
+
+    if (temp != nullptr)                // update head
+        head = temp->prev;
+
+
+    return head;
+}
 ```
 
 ### Main
@@ -114,13 +133,25 @@ t: , s:
 ```cpp
 int main()
 {
-// create a Doubly LL:
+    // create a Doubly LL:
+    Node *head = new Node(1);
+    head->next = new Node(2);
+    head->next->prev = head;
 
+    head->next->next = new Node(3);
+    head->next->next->prev = head->next;
+
+    head->next->next->next = new Node(4);
+    head->next->next->next->prev = head->next->next;
     // ====================================
 
 
     // =================Print LL===============
-
+    Node temp = head;
+    while(temp != nullptr){
+        cout << temp->val;
+        temp = temp->next;
+    }
 
      // =================Find length of LL===============
 
