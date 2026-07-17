@@ -1,6 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void solve()
+{
+    // ================inputs==============
+    // ====================================
+
+    // your solution here
+}
+
 int main()
 {
     ios::sync_with_stdio(0);
@@ -11,6 +19,7 @@ int main()
 
     while (t--)
     {
+        solve();
     }
 
     return 0;
