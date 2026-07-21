@@ -104,3 +104,7 @@ The partition is complete, so return the pivot's index.
 ```
 https://www.youtube.com/watch?v=WprjBK0p6rw
 ```
+
+T: O(n log n) average, O(n²) worst
+
+S: O(log n) average, O(n) worst
