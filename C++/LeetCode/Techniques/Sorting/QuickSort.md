@@ -78,7 +78,7 @@ a- You choose a pivot
 b- you count elements smaller than it
 
 c- If there are n smaller elements, then the pivot belongs after those n elements.
-    so you swap the pivot with the element tha is at that place
+    so you swap the pivot with the element that is at that place
 
 d- The pivot is now in its correct sorted position, but the elements on either
    side may still be mixed up (a larger element may be on the left and a smaller
