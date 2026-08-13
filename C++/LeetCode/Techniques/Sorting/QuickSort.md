@@ -108,3 +108,8 @@ https://www.youtube.com/watch?v=WprjBK0p6rw
 T: O(n log n) average, O(n²) worst
 
 S: O(log n) average, O(n) worst
+
+There are two types of QuickSort:
+
+- Hoare (above code)
+- Lumoto

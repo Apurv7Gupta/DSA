@@ -1,6 +1,4 @@
 ```cpp
-class Solution {
-public:
     int partition(vector<int>& nums, int left, int right) {
         // Randomize pivot to avoid worst-case O(n^2)
         int pivotIndex = left + rand() % (right - left + 1);
@@ -39,5 +37,6 @@ public:
         int target = nums.size() - k;
         return quickSelect(nums, 0, nums.size() - 1, target);
     }
-};
 ```
+
+if question is "Get Kth LARGEST element", then pass this as the target: "nums.size() - k"
