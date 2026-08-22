@@ -13,14 +13,14 @@ void solve()
     int count = 0;
     int maxCount = 0;
 
-    for (int i = 0; i < window_length; ++i)
+    for (int i = 0; i < window_length; ++i)         // Count 'B's in the FIRST window only (0 to window_length - 1)
     {
         if (chars[i] == 'B')
             count++;
     }
     maxCount = count;
 
-    for (int i = window_length; i < no_of_elements; ++i)
+    for (int i = window_length; i < no_of_elements; ++i)      // Slide the window from index window_length to no_of_elements - 1
     {
         if (chars[i] == 'B')
             count++;
