@@ -46,11 +46,11 @@ The problem asks for the **minimum number of `'W'`s to recolor to `'B'`** to get
 
 Every window contains only two types of characters: `'B'` and `'W'`.
 
-$$\text{Count of 'W'} + \text{Count of 'B'} = \text{window\_length}$$
+$$\text{Count of 'W'} + \text{Count of 'B'} = \mathit{window\_length}$$
 
 Rearranging that:
 
-$$\text{Count of 'W'} = \text{window\_length} - \text{Count of 'B'}$$
+$$\text{Count of 'W'} = \mathit{window\_length} - \text{Count of 'B'}$$
 
 - `maxCount` represents the **maximum number of `'B'`s** found in any single window.
 - To turn that best window into all `'B'`s, you only need to change its remaining characters (which are all `'W'`s).
