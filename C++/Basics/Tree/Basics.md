@@ -1,3 +1,5 @@
+### Class & constructor
+
 ```cpp
 class node
 {
@@ -15,6 +17,8 @@ node *right;
 
 };
 ```
+
+### Build a tree
 
 ```cpp
 node *buildTree(node *root)
@@ -45,7 +49,7 @@ cin >> data;
 ```cpp
 void levelOrderTraversal(node _root)
 {
-queue<node _> q;
+queue<node*> q;
 q.push(root);
 q.push(NULL);
 cout << endl;
