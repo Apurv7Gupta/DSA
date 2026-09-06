@@ -40,8 +40,9 @@ cin >> data;
 }
 ```
 
+### Printing a tree
+
 ```cpp
-// printing a tree
 void levelOrderTraversal(node _root)
 {
 queue<node _> q;
